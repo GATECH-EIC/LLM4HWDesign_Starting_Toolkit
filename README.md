@@ -1,2 +1,2 @@
 # LLM4HWDesign_Starting_Toolkit
-LLM4HWDesign Starting Toolkit
+Starting toolkit for LLM4HWDesign Contest@ICCAD 2024
