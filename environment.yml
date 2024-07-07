@@ -1,0 +1,27 @@
+name: iccad_challenge_2024
+channels:
+  - conda-forge
+  - pytorch
+  - nvidia
+dependencies:
+  - python=3.8
+  - pytorch 
+  - torchvision 
+  - pytorch-cuda=12.1
+  - gperf
+  - flex
+  - bison
+  - pip:
+    - jsonlines
+    - accelerate
+    - pandas 
+    - fire 
+    - transformers[torch]
+    - peft
+    - bitsandbytes
+    - accelerate
+    - scipy
+    - sentencepiece 
+    - transformers[dev]
+    - deepspeed
+    - transformers[deepspeed]
