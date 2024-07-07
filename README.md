@@ -37,6 +37,9 @@ Prepare your fine-tuned model and tokenizer in HuggingFace format.
 Install [Iverilog](https://steveicarus.github.io/iverilog/usage/installation.html) 
 
 Install VerilogEval as the benchmark:
+
+**Please read the WARNINGS in the [VerilogEval](https://github.com/NVlabs/verilog-eval/tree/main?tab=readme-ov-file#usage) before proceeding**
+
 ```bash
 git clone https://github.com/NVlabs/verilog-eval.git
 pip install -e verilog-eval
