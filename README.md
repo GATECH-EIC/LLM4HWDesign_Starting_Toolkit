@@ -8,7 +8,7 @@ The base dataset used in the contest is the [MG-Verilog dataset](https://hugging
 ## Toolkit Release Progress
 - [x] **Deduplication**: Scripts to identify and remove duplicate samples from the dataset.
 - [ ] **Fine-tuning**: Scripts to fine-tune a pretrained language model on the MG-Verilog dataset.
-- [ ] **Evaluation**: Tools to evaluate the performance of the fine-tuned model using standard metrics.
+- [x] **Evaluation**: Tools to evaluate the performance of the fine-tuned model using standard metrics.
 
 
 ## Setup Environment
