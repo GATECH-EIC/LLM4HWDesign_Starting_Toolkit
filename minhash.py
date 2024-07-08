@@ -329,19 +329,9 @@ if __name__ == "__main__":
 
     ds = load_dataset(args.dataset)
     #deduplicate based on the "code" key
-    ds_test = ds["high_level_global_summary_dataset"]
+    ds_test = ds["train"]
     ds_dedup, duplicate_clusters = deduplicate_dataset(ds_test, jaccard_threshold=0.85)
-    print(duplicate_clusters)
-    print("Duplicate clusters: ", len(duplicate_clusters))
-    print("Original dataset size: ", len(ds_test))
-    print("Deduplicated dataset size: ", len(ds_dedup))
-
-
-    #As merged dataset have multiple grained descriptions for each code, we can see clearer effect in code level
-    #In this case, dedeuplication may not be intended.
-    #You will provide a description for each code, so deduplication is applied.
-    ds_test = ds["merged_dataset"]
-    ds_dedup, duplicate_clusters = deduplicate_dataset(ds_test, jaccard_threshold=0.85)
+    # print(duplicate_clusters)
     print("Duplicate clusters: ", len(duplicate_clusters))
     print("Original dataset size: ", len(ds_test))
     print("Deduplicated dataset size: ", len(ds_dedup))
