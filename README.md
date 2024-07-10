@@ -13,6 +13,8 @@ The base dataset used in the contest is the [MG-Verilog dataset](https://hugging
 
 ## Setup Environment
 
+We assume CUDA 12.1. (Only needed if you want to do fine-tuning and evaluation on your own.)
+
 `conda env create -f environment.yml`
 
 
