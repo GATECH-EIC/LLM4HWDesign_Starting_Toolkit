@@ -1,10 +1,24 @@
-# LLM4HWDesign_Starting_Toolkit
+# LLM4HWDesign Starting Toolkit
 ## Introduction
 This repository provides a starting toolkit for participants of the [LLM4HWDesign Contest at ICCAD 2024](https://nvlabs.github.io/LLM4HWDesign/). The toolkit includes scripts and utilities for deduplicating training data, fine-tuning models, and evaluating model performance. Participants can use this toolkit to kickstart their work and streamline their development process.
 
 ## Base Dataset
-The base dataset used in the contest is the [MG-Verilog dataset](https://huggingface.co/datasets/GaTech-EIC/MG-Verilog). For your submitted data, please follow the same format as the [MG-Verilog dataset](https://huggingface.co/datasets/GaTech-EIC/MG-Verilog).
+The base dataset used in the contest is the [MG-Verilog dataset](https://huggingface.co/datasets/GaTech-EIC/MG-Verilog). For your submitted data, please follow the same format as the [MG-Verilog dataset](https://huggingface.co/datasets/GaTech-EIC/MG-Verilog). Please note that you can either provide multiple levels or a single level of description for each code sequence, but we will **concatenate all descriptions at different levels into one string** for each code sequence following the script below.
 
+```python
+instructions_dict = {
+    "summary": "xxx",
+    "detailed explanation": "yyy"
+}
+
+result = ";\n".join([f"{key}: {value}" for key, value in instructions_dict.items()]) + "\n"
+
+'''
+result should be
+summary: xxx;
+detailed explanation: yyy
+'''
+```
 ## Toolkit Release Progress
 - [x] **Deduplication**: Scripts to identify and remove duplicate samples from the dataset.
 - [ ] **Fine-tuning**: Scripts to fine-tune a pretrained language model on the MG-Verilog dataset.
