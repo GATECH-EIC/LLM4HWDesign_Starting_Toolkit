@@ -69,4 +69,6 @@ cd model_eval
 #example: ./gen.sh "finetuned_model/" "hf-xxxxxxxxxx"
 ```
 
-The results will be printed and logged in `./data/gen.jsonl`
+NOTE: The folder with your model and config should include two files (1) the generated pytorch_model.bin and the [model config](https://huggingface.co/meta-llama/CodeLlama-7b-Instruct-hf/blob/main/config.json) of CodeLlama-7B-Instruct from huggingface
+
+The results will be printed and logged in `./model_eval/data/gen.jsonl`
