@@ -1,14 +1,17 @@
 export CUDA_VISIBLE_DEVICES=0,1,2,3
 
+ckpt_dir=$1
+token=$2
+
 export 'PYTORCH_CUDA_ALLOC_CONF=max_split_size_mb:64'
 
 accelerate launch --multi_gpu generate.py \
-    --checkpoint_dir PATH_TO_THE_FOLDER_WITH_MODEL_AND_CONFIG_FILE \
+    --checkpoint_dir $ckpt_dir \
     --model_type "qlora" \
     --base_model "codellama/CodeLlama-7b-Instruct-hf" \
     --tokenizer_type "code_llama" \
     --cache_dir "./HF_cache/" \
-    --hf_token "INPUT_YOUR_TOKEN_HERE" \
+    --hf_token $token \
     --max_new_tokens 1024 \
     --temperature 0.7 \
     --desc_file ../verilog_eval/descriptions/VerilogDescription_Machine.jsonl \

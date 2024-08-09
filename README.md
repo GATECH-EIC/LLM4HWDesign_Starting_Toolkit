@@ -65,8 +65,8 @@ pip install -e verilog-eval
 
 ```bash
 cd model_eval
-./gen.sh <path_to_your_model> <path_to_your_tokenizer>
-#example: ./gen.sh "codellama/CodeLlama-7b-Instruct-hf" "code_llama"
+./gen.sh <path_to_folder_with_your_model_and_config> <your_huggingface_token>
+#example: ./gen.sh "finetuned_model/" "hf-xxxxxxxxxx"
 ```
 
 The results will be printed and logged in `./data/gen.jsonl`
