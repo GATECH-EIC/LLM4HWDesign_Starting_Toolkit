@@ -21,7 +21,7 @@ detailed explanation: yyy
 ```
 ## Toolkit Release Progress
 - [x] **Deduplication**: Scripts to identify and remove duplicate samples from the dataset.
-- [ ] **Fine-tuning**: Scripts to fine-tune a pretrained language model on the MG-Verilog dataset.
+- [x] **Fine-tuning**: Scripts to fine-tune a pretrained language model on the MG-Verilog dataset.
 - [x] **Evaluation**: Tools to evaluate the performance of the fine-tuned model using standard metrics.
 
 
