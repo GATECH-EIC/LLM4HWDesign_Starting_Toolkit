@@ -43,6 +43,7 @@ OUTPUT_DIR="./results/MG-Verilog"
 # Run the PEFT command by appropriately setting the values for the parameters such as the number of steps,
 # model checkpoint path, batch sizes etc. For a full reference of parameter
 # settings refer to the config at https://github.com/NVIDIA/NeMo/blob/main/examples/nlp/language_modeling/tuning/conf/megatron_gpt_finetuning_config.yaml
+# the value of trainer.max_steps should be scaled according to the size of the training data to ensure that the total number of epochs equals 3
 python /opt/NeMo/examples/nlp/language_modeling/tuning/megatron_gpt_finetuning.py \
     trainer.log_every_n_steps=1 \
     trainer.precision=bf16 \
