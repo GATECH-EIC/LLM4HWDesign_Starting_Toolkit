@@ -9,6 +9,7 @@ In our evaluation process for each submission, we will conduct fine-tuning with 
 # In Host Machine
 docker pull nvcr.io/nvidia/nemo:24.05
 ```
+If you received docker permission error, please use sudo to run the above command. 
 
 ## Run NeMO docker
 ```bash
