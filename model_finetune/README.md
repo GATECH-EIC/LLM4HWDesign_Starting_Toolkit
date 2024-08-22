@@ -9,17 +9,18 @@ In our evaluation process for each submission, we will conduct fine-tuning with 
 # In Host Machine
 docker pull nvcr.io/nvidia/nemo:24.05
 ```
-If you received docker permission error, please use sudo to run the above command. 
+If you encounter a permission error, please use sudo to run the above command. 
 
 ## Run NeMO docker
 ```bash
 # In Host Machine
 docker run --gpus all --shm-size=2g --net=host --ulimit memlock=-1 --rm -it -v ${PWD}:/workspace -w /workspace -v ${PWD}/results:/results nvcr.io/nvidia/nemo:24.05 bash
 ```
+As with the previous step, if you encounter a permission error, please use sudo to run the above command. 
 
 ## Prepare dataset
 
-Please preapre the dataset to be summited in .jsonl format. Here we provided an example of converting [MG-Verilog dataset](https://huggingface.co/datasets/GaTech-EIC/MG-Verilog) in huggingface into .jsonl format and used it as the fine-tuning dataset.
+Please prepare the dataset to be summited in .jsonl format. Here we provided an example of converting [MG-Verilog dataset](https://huggingface.co/datasets/GaTech-EIC/MG-Verilog) in huggingface into .jsonl format and used it as the fine-tuning dataset.
 
 ```bash
 # In Host Machine
