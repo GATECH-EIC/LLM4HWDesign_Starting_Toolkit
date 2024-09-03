@@ -17,7 +17,9 @@ import pandas as pd
 
 import jsonlines
 
-sys.path.append("../verilog_eval/verilog_eval")
+#only support https://github.com/NVlabs/verilog-eval/tree/release/1.0.0 
+#pay attention to the "verilog-eval" or "verilog_eval" which is used in mg-verilog's own midified VerilogEval
+sys.path.append("../verilog-eval/verilog_eval")
 from evaluation import evaluate_functional_correctness
 from datetime import datetime
 from tqdm import tqdm
