@@ -56,6 +56,10 @@ Install VerilogEval as the benchmark:
 
 **Please read the WARNINGS in the [VerilogEval](https://github.com/NVlabs/verilog-eval/tree/main?tab=readme-ov-file#usage) before proceeding**
 
+**Only support 1.0 Version** https://github.com/NVlabs/verilog-eval/tree/release/1.0.0 
+
+Pay attention to the "verilog-eval" or "verilog_eval" which is used in mg-verilog's own midified VerilogEval
+
 ```bash
 git clone https://github.com/NVlabs/verilog-eval.git
 pip install -e verilog-eval
