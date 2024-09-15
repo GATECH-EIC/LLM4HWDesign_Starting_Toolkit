@@ -7,7 +7,7 @@ dataset = load_dataset('GaTech-EIC/MG-Verilog')
 # Function to rename keys and save to JSONL
 def save_to_jsonl(split, split_name):
     jsonl_file_path = 'dataset.jsonl'
-    with open(jsonl_file_path, 'w') as jsonl_file:
+    with open(jsonl_file_path, 'a') as jsonl_file:
         for example in split:
             # Rename keys
             current_sample_dict = example['description']
