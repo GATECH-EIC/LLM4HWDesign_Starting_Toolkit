@@ -1,3 +1,9 @@
+if [ -z "$1" ]
+  then
+    echo "No argument supplied for max_steps. Please provide an integer value."
+    exit 1
+fi
+
 # This is the nemo model we are finetuning
 MODEL="./CodeLlama-7b.nemo"
 
@@ -50,7 +56,7 @@ python /opt/NeMo/examples/nlp/language_modeling/tuning/megatron_gpt_finetuning.p
     trainer.devices=${GPU_COUNT} \
     trainer.num_nodes=1 \
     trainer.val_check_interval=20 \
-    trainer.max_steps=500 \
+    trainer.max_steps=$1 \
     model.restore_from_path=${MODEL} \
     model.peft.peft_scheme=${PEFT_SCHEME} \
     model.micro_batch_size=1 \
